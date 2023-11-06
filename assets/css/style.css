@@ -1,0 +1,110 @@
+body {
+    background: linear-gradient(to right, rgb(255, 209, 255), #f99df9, #ff99ff);
+    /* background: url('img/background-video.mp4'); */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .main_text {
+    animation: textPulse 5s infinite;
+  }
+  
+  @keyframes textPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+  }
+
+  .content {
+    text-align: center;
+  }
+
+  .btn {
+    font-size: 24px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+
+  .btn:hover {
+    background-color: #0056b3;
+    transition: 1s;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #ff99ff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .navbar a {
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    margin-left: 20px;
+  }
+  
+  .userIcon {
+    position: absolute; /* Promenjeno sa 'relative' na 'absolute' */
+    left: 0; /* Postavljeno na 10 piksela */
+    top: 50%; /* Centrirano vertikalno */
+    transform: translateY(-50%); /* Centrirano vertikalno */
+  }
+
+  .userIcon .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    left: 0;
+    /* margin-top: 10px; Dodato malo rastojanja iznad dropdown-a */
+    border-radius: 10px; /* Dodat zaobljeni ivici dropdown-a */
+    animation: fadeIn 0.3s; /* Nova linija: Dodata animacija za pojavljivanje */
+  }
+  
+  .userIcon:hover .dropdown-content {
+    display: block;
+    margin-top: 2px;
+  }
+  
+  .dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f99df9;
+    transition: 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.5;
+    }
+    to{
+        opacity: 1;
+    }
+  }

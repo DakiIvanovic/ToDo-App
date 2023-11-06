@@ -1,0 +1,68 @@
+/* Osnovni stil za telo stranice */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Light blue background color */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Stil za formu */
+form {
+    background-color: #fff;
+    border: 4px solid #ffccd2; /* Pink border around the container */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Stil za ostatak sadržaja (ovde ćemo postaviti echo poruke) */
+.text {
+    color: #333;
+    text-align: center;
+    margin: 20px;
+}
+
+/* Stil za unutrašnje elemente forme */
+form h1 {
+    color: #ff6b6e; /* Pink header text color */
+    margin-bottom: 20px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    outline: none;
+}
+
+/* Pink underline for input fields */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+    border-bottom: 2px solid #ff6b6e;
+}
+
+/* Moving placeholder effect */
+form input[type="text"]:focus ~ label,
+form input[type="email"]:focus ~ label,
+form input[type="password"]:focus ~ label {
+    top: -20px;
+    font-size: 14px;
+    color: #ff6b6e;
+}
+
+/* Stil za ikonice validacije (zelena kvačica ili crveni "iks") */
+.validation-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    background-size: cover;
+}
